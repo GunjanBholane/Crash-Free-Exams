@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Regression Prediction</title>
+    <style>
+        body {
+            background-color: rgba(109, 212, 252, 0.198); /* Set background color to Sky blue */
+            font-size: 16px; /* Default font size for body */
+            font-family: Arial, sans-serif; /* Optional: Choose a font */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .exam {
+            height: 300px;
+            width: 500px; /* Adjust width as needed */
+            margin: 50px auto; /* Center the container horizontally */
+            background-color: white; /* Set background color to pale pink */
+            border: 5px solid darkblue; /* Add border with dark blue color */
+            padding: 20px; /* Add padding inside the container */
+            text-align: center; 
+            font-size: large;
+        }
+
+        form {
+            margin-top: 20px; /* Add margin top to the form */
+        }
+
+        form input[type="text"]{
+            
+            font-size: 1.2em; /* Increase font size for input elements */
+            padding: 10px; /* Add padding inside input elements */
+            width: 100%; /* Make inputs fill the container width */
+            box-sizing: border-box; /* Include padding and border in width */
+            text-align: left;
+        }
+            form input[type="submit"] {
+            font-size: 1.2em; 
+            padding: 10px; 
+            width: 100%; 
+            box-sizing: border-box; 
+                  
+        }
+        
+
+        form input[type="submit"] {
+            background-color: darkblue; /* Set button background color to dark blue */
+            color: white; /* Set text color to white */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Add padding inside the button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            width: 50%;
+        }
+
+        h1 {
+            font-size: 2em; /* Increase font size for h1 */
+            text-align: center; /* Center align h1 */
+            color: navy; /* Set text color to navy */
+
+        }
+
+        p {
+            text-align: center; /* Center align paragraphs */
+            color: navy; /* Set text color to navy */
+            text-align: left; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Yearly Registration Predictions for Neet Exam</h1>
+    <div class="exam">
+        <form action="/" method="post">
+            <label for="year">Enter the year to make Registrations Prediction:</label><br>
+            <input type="text" id="year" name="year" required><br><br>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction %}
+        <p>Predicted No. of Registrations which will be done for the given year {{ Year }} is: {{ prediction }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
